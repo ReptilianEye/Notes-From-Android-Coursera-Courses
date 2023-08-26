@@ -91,7 +91,7 @@ class MainActivity : ComponentActivity() {
 
                     if (searchPhrase.isNotEmpty()) {
                         menuItems = menuItems.filter {
-                            it.title.lowercase().contains(searchPhrase.lowercase())
+                            it.title.contains(searchPhrase, ignoreCase = true)
                         }
                     }
                     MenuItemsList(items = menuItems)
